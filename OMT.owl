@@ -3,7 +3,6 @@
      xml:base="http://www.nmdc.com/ontology/OMT"
      xmlns:SI="http://si-digital-framework.org/SI#"
      xmlns:OMT="http://www.nmdc.com/ontology/OMT#"
-     xmlns:SI1="https://si-digital-framework.org/SI#"
      xmlns:omt="http://www.nmdc.com/ontology/OMT"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -228,36 +227,6 @@
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
-
-
-    <!-- https://si-digital-framework.org/SI#hasDatatype -->
-
-    <owl:AnnotationProperty rdf:about="https://si-digital-framework.org/SI#hasDatatype"/>
-    
-
-
-    <!-- https://si-digital-framework.org/SI#hasDefiningResolution -->
-
-    <owl:AnnotationProperty rdf:about="https://si-digital-framework.org/SI#hasDefiningResolution"/>
-    
-
-
-    <!-- https://si-digital-framework.org/SI#hasScalingFactor -->
-
-    <owl:AnnotationProperty rdf:about="https://si-digital-framework.org/SI#hasScalingFactor"/>
-    
-
-
-    <!-- https://si-digital-framework.org/SI#hasSymbol -->
-
-    <owl:AnnotationProperty rdf:about="https://si-digital-framework.org/SI#hasSymbol"/>
-    
-
-
-    <!-- https://si-digital-framework.org/SI#hasUnit -->
-
-    <owl:AnnotationProperty rdf:about="https://si-digital-framework.org/SI#hasUnit"/>
     
 
 
@@ -631,6 +600,14 @@ NOTE 2.In some fields, this term is also called range of &quot;indication&quot;.
         <rdfs:subPropertyOf rdf:resource="http://www.nmdc.com/ontology/OMT#hasHumidityCondition"/>
         <rdfs:label xml:lang="en">has lower humidity limit</rdfs:label>
         <rdfs:label xml:lang="zh">湿度下限</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nmdc.com/ontology/OMT#hasLowerLimit -->
+
+    <owl:ObjectProperty rdf:about="http://www.nmdc.com/ontology/OMT#hasLowerLimit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1121,6 +1098,14 @@ Cartesian components (Fx:Fy:Fz)=(-31.5;43.2;17.0)N.</skos:note>
         <rdfs:subPropertyOf rdf:resource="http://www.nmdc.com/ontology/OMT#hasHumidityCondition"/>
         <rdfs:label xml:lang="en">has upper humidity limit</rdfs:label>
         <rdfs:label xml:lang="zh">湿度上限</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.nmdc.com/ontology/OMT#hasUpperLimit -->
+
+    <owl:ObjectProperty rdf:about="http://www.nmdc.com/ontology/OMT#hasUpperLimit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -2244,7 +2229,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#ampere2018"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1948-01-01</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">ampere1948</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">ampère1948</skos:prefLabel>
@@ -2268,7 +2253,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#ampere2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/ElementaryCharge"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{A}} = \left(\frac{{e}}{{1.602\:176\:634 \times 10^{-19}}}\right) {\rm{s}}^{-1}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{A}} = \left(\frac{{e}}{{1.602\:176\:634 \times 10^{-19}}}\right) {\rm{s}}^{-1}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">L’ampère, symbole $\rm{A}$, est l’unité de courant électrique du SI. Il est défini en prenant la valeur numérique fixée de la charge élémentaire, ${e}$, égale à ${1.602\:176\:634 \times 10^{-19}}$ lorsqu’elle est exprimée en $\rm{C}$, unité égale à ${\rm{A}}\ {\rm{s}}$, la seconde étant définie en fonction de $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The ampere, symbol $\rm{A}$, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge, ${e}$, to be ${1.602\:176\:634 \times 10^{-19}}$ when expressed in the unit $\rm{C}$, which is equal to ${\rm{A}}\ {\rm{s}}$, where the second is defined in terms of $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
@@ -2278,7 +2263,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#ampere2018note4"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#ampere1948"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">ampere2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">ampère2018</skos:prefLabel>
@@ -2341,7 +2326,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-10-12</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#candela1967"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1948-01-01</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">candela1948</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">candela1948</skos:prefLabel>
@@ -2361,7 +2346,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#candela1979"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#candela1948"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-10-13</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">candela1967</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">candela1967</skos:prefLabel>
@@ -2382,7 +2367,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#candela2018"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#candela1967"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1979-10-11</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">candela1979</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">candela1979</skos:prefLabel>
@@ -2406,7 +2391,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#candela2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/LuminousEfficacy"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{cd}} = \left(\frac{{K_{\rm{cd}}}}{683}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-3}\;{\rm{sr}}^{-1}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{cd}} = \left(\frac{{K_{\rm{cd}}}}{683}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-3}\;{\rm{sr}}^{-1}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">La candela, symbole $\rm{cd}$, est l’unité du SI d’intensité lumineuse dans une direction donnée. Elle est définie en prenant la valeur numérique fixée de l’efficacité lumineuse d’un rayonnement monochromatique de fréquence ${540 \times 10^{12}}\ {{\rm{Hz}}}$, ${K_{\rm{cd}}}$, égale à ${683}$ lorsqu’elle est exprimée en ${\rm{lm}}\ {\rm{W}}^{-1} $, unité égale à ${\rm{cd}}\ {\rm{sr}}\ {\rm{W}}^{-1}$, ou ${\rm{cd}}\ {\rm{sr}}\ {\rm{kg}}^{-1}\ {\rm{m}}^{-2}\ {\rm{s}}^{3}$, le kilogramme, le mètre et la seconde étant définis en fonction de ${h}$, $c$ et $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The candela, symbol $\rm{cd}$, is the SI unit of luminous intensity in a given direction. It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency ${540 \times 10^{12}}\ {{\rm{Hz}}}$, ${K_{\rm{cd}}}$, to be ${683}$ when expressed in the unit ${\rm{lm}}\ {\rm{W}}^{-1} $, which is equal to ${\rm{cd}}\ {\rm{sr}}\ {\rm{W}}^{-1}$, or ${\rm{cd}}\ {\rm{sr}}\ {\rm{kg}}^{-1}\ {\rm{m}}^{-2}\ {\rm{s}}^{3}$, where the kilogram, metre and second are defined in terms of ${h}$, $c$ and $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
@@ -2414,7 +2399,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#candela2018note2"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#candela1979"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">candela2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">candela2018</skos:prefLabel>
@@ -2456,7 +2441,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#kelvin2018"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-10-13</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">kelvin1967</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kelvin1967</skos:prefLabel>
@@ -2491,7 +2476,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#kelvin2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/BoltzmannConstant"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{K}} = \left(\frac{1.380\:649 \times 10^{-23}}{{k}}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-2}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{K}} = \left(\frac{1.380\:649 \times 10^{-23}}{{k}}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-2}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">Le kelvin, symbole $\rm{K}$, est l’unité de température thermodynamique du SI. Il est défini en prenant la valeur numérique fixée de la constante de Boltzmann, ${k}$, égale à $1.380\:649 \times 10^{-23}$ lorsqu’elle est exprimée en ${\rm{J}}\ {\rm{K}}^{-1}$, unité égale à ${\rm{kg}}\ {\rm{m}}^{2}\ {\rm{s}}^{-2}\ {\rm{K}}^{-1}$, le kilogramme, le mètre et la seconde étant définis en fonction de ${h}$, $c$ et $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The kelvin, symbol $\rm{K}$, is the SI unit of thermodynamic temperature. It is defined by taking the fixed numerical value of the Boltzmann constant, ${k}$, to be $1.380\:649 \times 10^{-23}$ when expressed in the unit ${\rm{J}}\ {\rm{K}}^{-1}$, which is equal to ${\rm{kg}}\ {\rm{m}}^{2}\ {\rm{s}}^{-2}\ {\rm{K}}^{-1}$, where the kilogram, metre and second are defined in terms of ${h}$, $c$ and $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
@@ -2504,7 +2489,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#kelvin2018note7"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#kelvin1967"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">kelvin2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kelvin2018</skos:prefLabel>
@@ -2600,7 +2585,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#kilogram2018"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1901-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">kilogram1901</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kilogramme1901</skos:prefLabel>
@@ -2624,7 +2609,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#kilogram2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/PlanckConstant"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{kg}} = \left(\frac{{h}}{6.626\:070\:15 \times 10^{-34}}\right) {\rm{m}}^{-2}\;{\rm{s}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{kg}} = \left(\frac{{h}}{6.626\:070\:15 \times 10^{-34}}\right) {\rm{m}}^{-2}\;{\rm{s}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">Le kilogramme, symbole $\rm{kg}$, est l’unité de masse du SI. Il est défini en prenant la valeur numérique fixée de la constante de Planck, ${h}$, égale à $6.626\:070\:15 \times 10^{-34}$ lorsqu’elle est exprimée en ${\rm{J}}\ {\rm{s}}$, unité égale à ${\rm{kg}}\ {\rm{m}}^{2}\ {\rm{s}}^{-1}$, le mètre et la seconde étant définis en fonction de $c$ et $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The kilogram, symbol $\rm{kg}$, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant, ${h}$, to be $6.626\:070\:15 \times 10^{-34}$ when expressed in the unit ${\rm{J}}\ {\rm{s}}$, which is equal to ${\rm{kg}}\ {\rm{m}}^{2}\ {\rm{s}}^{-1}$, where the metre and the second are defined in terms of $c$ and $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
@@ -2635,7 +2620,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#kilogram2018note5"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#kilogram1901"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">kilogram2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kilogramme2018</skos:prefLabel>
@@ -2708,7 +2693,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1927-09-29</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#metre1927"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1889-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">metre1889</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mètre1889</skos:prefLabel>
@@ -2727,7 +2712,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#metre1960"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#metre1889"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1927-09-30</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">metre1927</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mètre1927</skos:prefLabel>
@@ -2747,7 +2732,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#metre1983"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#metre1927"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-10-14</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">metre1960</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mètre1960</skos:prefLabel>
@@ -2779,7 +2764,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#metre2018"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#metre1960"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-10-17</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">metre1983</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mètre1983</skos:prefLabel>
@@ -2803,7 +2788,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#metre2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/SpeedOfLight"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{m}} = \left(\frac{c}{299\:792\:458}\right) {\rm{s}} = \frac{{9\:192\:631\:770}}{299\:792\:458} \frac{c}{\Delta\nu_{\rm{Cs}}} \approx {30.663\:319} \frac{c}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{m}} = \left(\frac{c}{299\:792\:458}\right) {\rm{s}} = \frac{{9\:192\:631\:770}}{299\:792\:458} \frac{c}{\Delta\nu_{\rm{Cs}}} \approx {30.663\:319} \frac{c}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">Le mètre, symbole $\rm{m}$, est l’unité de longueur du SI. Il est défini en prenant la valeur numérique fixée de la vitesse de la lumière dans le vide, $c$, égale à $299\:792\:458$ lorsqu’elle est exprimée en ${\rm{m}}\ {{\rm{s}}^{-1}}$, la seconde étant définie en fonction de $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The metre, symbol $\rm{m}$, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum, $c$, to be $299\:792\:458$ when expressed in the unit ${\rm{m}}\ {{\rm{s}}^{-1}}$, where the second is defined in terms of the caesium frequency $\Delta\nu_{\rm{Cs}}$.</SI:hasDefiningText>
@@ -2811,7 +2796,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#metre2018note2"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#metre1983"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">metre2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mètre2018</skos:prefLabel>
@@ -2853,7 +2838,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#mole2018"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1971-10-04</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">mole1971</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mole1971</skos:prefLabel>
@@ -2888,7 +2873,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#mole2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/AvogadroConstant"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{mol}} = \left(\frac{6.022\:140\:76 \times 10^{23}}{{N_{\rm{A}}}}\right)</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{mol}} = \left(\frac{6.022\:140\:76 \times 10^{23}}{{N_{\rm{A}}}}\right)</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">La mole, symbole $\rm{mol}$, est l’unité de quantité de matière du SI. Une mole contient exactement $6.022\:140\:76 \times 10^{23}$ entités élémentaires. Ce nombre, appelé « nombre d’Avogadro », correspond à la valeur numérique fixée de la constante d’Avogadro, ${N_{\rm{A}}}$, lorsqu’elle est exprimée en ${\rm{mol}}^{-1}$. La quantité de matière, symbole ${n}$, d’un système est une représentation du nombre d’entités élémentaires spécifiées. Une entité élémentaire peut être un atome, une molécule, un ion, un électron, ou toute autre particule ou groupement spécifié de particules.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The mole, symbol $\rm{mol}$, is the SI unit of amount of substance. One mole contains exactly $6.022\:140\:76 \times 10^{23}$ elementary entities. This number is the fixed numerical value of the Avogadro constant, ${N_{\rm{A}}}$, when expressed in the unit ${\rm{mol}}^{-1}$ and is called the Avogadro number. The amount of substance, symbol ${n}$, of a system is a measure of the number of specified elementary entities. An elementary entity may be an atom, a molecule, an ion, an electron, any other particle or specified group of particles.</SI:hasDefiningText>
@@ -2900,7 +2885,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#mole2018note6"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#mole1971"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">mole2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">mole2018</skos:prefLabel>
@@ -2984,7 +2969,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-10-12</SI:hasEndValidity>
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#second1967"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-10-18</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">second1960</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">seconde1960</skos:prefLabel>
@@ -3005,7 +2990,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasNextDefinition rdf:resource="http://si-digital-framework.org/SI#second2018"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#second1960"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-10-13</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">superseded</SI:hasStatus>
+        <SI:hasStatus>superseded</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">second1967</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">seconde1967</skos:prefLabel>
@@ -3029,7 +3014,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI#second2018">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#Definition"/>
         <SI:hasDefiningConstant rdf:resource="http://si-digital-framework.org/constants/HyperfineTransitionFrequencyOfCs-133"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Hz}} = \frac{\Delta\nu_{\rm{Cs}}}{{9\:192\:631\:770}} \quad {\rm{or}} \quad 1\;{\rm{s}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Hz}} = \frac{\Delta\nu_{\rm{Cs}}}{{9\:192\:631\:770}} \quad {\rm{or}} \quad 1\;{\rm{s}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM26-Res1"/>
         <SI:hasDefiningText xml:lang="fr">La seconde, symbole $\rm{s}$, est l’unité de temps du SI. Elle est définie en prenant la valeur numérique fixée de la fréquence du césium, $\Delta\nu_{\rm{Cs}}$, la fréquence de la transition hyperfine de l’état fondamental de l’atome de césium 133 non perturbé, égale à ${9\:192\:631\:770}$ lorsqu’elle est exprimée en ${\rm{Hz}}$, unité égale à ${\rm{s}}^{-1}$.</SI:hasDefiningText>
         <SI:hasDefiningText xml:lang="en">The second, symbol $\rm{s}$, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, $\Delta\nu_{\rm{Cs}}$, the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be ${9\:192\:631\:770}$ when expressed in the unit ${\rm{Hz}}$, which is equal to ${\rm{s}}^{-1}$.</SI:hasDefiningText>
@@ -3040,7 +3025,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinitionNote rdf:resource="http://si-digital-framework.org/SI#second2018note5"/>
         <SI:hasPreviousDefinition rdf:resource="http://si-digital-framework.org/SI#second1967"/>
         <SI:hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</SI:hasStartValidity>
-        <SI:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current</SI:hasStatus>
+        <SI:hasStatus>current</SI:hasStatus>
         <SI:prefixRestriction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</SI:prefixRestriction>
         <skos:prefLabel xml:lang="en">second2018</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">seconde2018</skos:prefLabel>
@@ -3107,7 +3092,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/arcminute">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">′</SI:hasSymbol>
+        <SI:hasSymbol>′</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3125,7 +3110,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/arcsecond">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">″</SI:hasSymbol>
+        <SI:hasSymbol>″</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3143,7 +3128,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/astronomicalunit">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">au</SI:hasSymbol>
+        <SI:hasSymbol>au</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3161,9 +3146,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/becquerel">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Bq}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Bq}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM15-Res8"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bq</SI:hasSymbol>
+        <SI:hasSymbol>Bq</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3181,7 +3166,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/bel">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</SI:hasSymbol>
+        <SI:hasSymbol>B</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/RLGB"/>
@@ -3200,7 +3185,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#candela1967"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#candela1979"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#candela2018"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cd</SI:hasSymbol>
+        <SI:hasSymbol>cd</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/LUIN"/>
@@ -3214,9 +3199,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/coulomb">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{C}} = \left(\frac{{9\:192\:631\:770} \times {e}}{{1.602\:176\:634 \times 10^{-19}} \times \Delta\nu_{\rm{Cs}}}\right) {\rm{s}}^{-1}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{C}} = \left(\frac{{9\:192\:631\:770} \times {e}}{{1.602\:176\:634 \times 10^{-19}} \times \Delta\nu_{\rm{Cs}}}\right) {\rm{s}}^{-1}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</SI:hasSymbol>
+        <SI:hasSymbol>C</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3234,7 +3219,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/dalton">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Da</SI:hasSymbol>
+        <SI:hasSymbol>Da</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3252,7 +3237,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/day">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</SI:hasSymbol>
+        <SI:hasSymbol>d</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3270,7 +3255,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/degree">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">°</SI:hasSymbol>
+        <SI:hasSymbol>°</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3288,9 +3273,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/degreeCelsius">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{{^\circ}{C}}} = \left(\frac{1.380\:649 \times 10^{-23}}{{k}}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-2}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{{^\circ}{C}}} = \left(\frac{1.380\:649 \times 10^{-23}}{{k}}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-2}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">℃</SI:hasSymbol>
+        <SI:hasSymbol>℃</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits rdf:resource="http://si-digital-framework.org/SI/units/kelvin"/>
@@ -3306,7 +3291,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/electronvolt">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eV</SI:hasSymbol>
+        <SI:hasSymbol>eV</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3324,9 +3309,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/farad">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{F}} = \left(\frac{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times {\Delta\nu_{\rm{Cs}}}^4 \times {{e}}^2} {({{9\:192\:631\:770}})^4 \times ({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2]\right) {\rm{m}}^2\;{\rm{s}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{F}} = \left(\frac{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times {\Delta\nu_{\rm{Cs}}}^4 \times {{e}}^2} {({{9\:192\:631\:770}})^4 \times ({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2]\right) {\rm{m}}^2\;{\rm{s}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</SI:hasSymbol>
+        <SI:hasSymbol>F</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3347,7 +3332,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/gram">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#MeasurementUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</SI:hasSymbol>
+        <SI:hasSymbol>g</SI:hasSymbol>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/MASS"/>
         <skos:prefLabel xml:lang="en">gram</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">gramme</skos:prefLabel>
@@ -3359,9 +3344,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/gray">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Gy}} = \left(\frac{{c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{s}}^2</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Gy}} = \left(\frac{{c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{s}}^2</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM15-Res9"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gy</SI:hasSymbol>
+        <SI:hasSymbol>Gy</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3382,7 +3367,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/hectare">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</SI:hasSymbol>
+        <SI:hasSymbol>ha</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3400,9 +3385,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/henry">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{H}} = \left(\frac{({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2 \times {{e}}^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^5</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{H}} = \left(\frac{({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2 \times {{e}}^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^5</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</SI:hasSymbol>
+        <SI:hasSymbol>H</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3423,9 +3408,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/hertz">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Hz}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Hz}} = \frac{{9\:192\:631\:770}}{\Delta\nu_{\rm{Cs}}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hz</SI:hasSymbol>
+        <SI:hasSymbol>Hz</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3443,7 +3428,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/hour">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</SI:hasSymbol>
+        <SI:hasSymbol>h</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3461,9 +3446,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/joule">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{J}} = \left(\frac{{{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^3</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{J}} = \left(\frac{{{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^3</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J</SI:hasSymbol>
+        <SI:hasSymbol>J</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3484,9 +3469,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/katal">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{kat}} = \frac{6.022\:140\:76 \times 10^{23} \times \Delta\nu_{\rm{Cs}}}{{9\:192\:631\:770} \times {N_{\rm{A}}}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{kat}} = \frac{6.022\:140\:76 \times 10^{23} \times \Delta\nu_{\rm{Cs}}}{{9\:192\:631\:770} \times {N_{\rm{A}}}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM21-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kat</SI:hasSymbol>
+        <SI:hasSymbol>kat</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3506,7 +3491,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SIBaseUnit"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#kelvin1967"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#kelvin2018"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</SI:hasSymbol>
+        <SI:hasSymbol>K</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/TEMT"/>
@@ -3525,7 +3510,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#kilogram2018"/>
         <SI:hasNonPrefixedUnit rdf:resource="http://si-digital-framework.org/SI/units/gram"/>
         <SI:hasPrefix rdf:resource="http://si-digital-framework.org/SI/prefixes/kilo"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg</SI:hasSymbol>
+        <SI:hasSymbol>kg</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/MASS"/>
@@ -3539,8 +3524,8 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/litre">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasAltSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</SI:hasAltSymbol>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</SI:hasSymbol>
+        <SI:hasAltSymbol>l</SI:hasAltSymbol>
+        <SI:hasSymbol>L</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3558,9 +3543,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/lumen">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{lm}} = \left(\frac{{K_{\rm{cd}}}}{683}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-3}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{lm}} = \left(\frac{{K_{\rm{cd}}}}{683}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-3}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lm</SI:hasSymbol>
+        <SI:hasSymbol>lm</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3581,9 +3566,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/lux">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{lx}} = \left(\frac{({299\:792\:458)}^2 \times {K_{\rm{cd}}}}{683 \times {c}^2}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-5}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{lx}} = \left(\frac{({299\:792\:458)}^2 \times {K_{\rm{cd}}}}{683 \times {c}^2}\right) {\rm{kg}}\;{\rm{m}}^2\;{\rm{s}}^{-5}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lx</SI:hasSymbol>
+        <SI:hasSymbol>lx</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3609,7 +3594,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#metre1960"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#metre1983"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#metre2018"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</SI:hasSymbol>
+        <SI:hasSymbol>m</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/LENG"/>
@@ -3623,7 +3608,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/minute">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">min</SI:hasSymbol>
+        <SI:hasSymbol>min</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3643,7 +3628,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SIBaseUnit"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#mole1971"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#mole2018"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mol</SI:hasSymbol>
+        <SI:hasSymbol>mol</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/AMSU"/>
@@ -3657,7 +3642,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/neper">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Np</SI:hasSymbol>
+        <SI:hasSymbol>Np</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/RLGN"/>
@@ -3672,9 +3657,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/newton">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{N}} = \left(\frac{{{h}} \times c \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times 299\:792\:458 \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^2</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{N}} = \left(\frac{{{h}} \times c \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times 299\:792\:458 \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^2</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</SI:hasSymbol>
+        <SI:hasSymbol>N</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3692,9 +3677,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/ohm">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{{\Omega}} = \left(\frac{({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3 \times {{e}}^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^5</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{{\Omega}} = \left(\frac{({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3 \times {{e}}^2}\right) {\rm{m}}^{-2}\;{\rm{s}}^5</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM9-Res7"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ω</SI:hasSymbol>
+        <SI:hasSymbol>Ω</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3715,9 +3700,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/pascal">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Pa}} = \left(\frac{{{h}} \times 299\:792\:458 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times c \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Pa}} = \left(\frac{{{h}} \times 299\:792\:458 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times c \times ({{9\:192\:631\:770}})^2}\right) {\rm{m}}^{-2}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM14-Decl"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</SI:hasSymbol>
+        <SI:hasSymbol>Pa</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3739,7 +3724,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/radian">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad</SI:hasSymbol>
+        <SI:hasSymbol>rad</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3760,7 +3745,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#second1960"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#second1967"/>
         <SI:hasDefinition rdf:resource="http://si-digital-framework.org/SI#second2018"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</SI:hasSymbol>
+        <SI:hasSymbol>s</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">SI base unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI de base</SI:hasUnitTypeAsString>
         <SI:isUnitOfQtyKind rdf:resource="http://si-digital-framework.org/quantities/TIME"/>
@@ -3774,9 +3759,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/siemens">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{S}} = \left(\frac{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times {\Delta\nu_{\rm{Cs}}}^3 \times {{e}}^2} {({{9\:192\:631\:770}})^3 \times ({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2]\right) {\rm{m}}^2\;{\rm{s}}</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{S}} = \left(\frac{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times {\Delta\nu_{\rm{Cs}}}^3 \times {{e}}^2} {({{9\:192\:631\:770}})^3 \times ({{1.602\:176\:634 \times 10^{-19}}})^2 \times {{h}} \times {c}^2]\right) {\rm{m}}^2\;{\rm{s}}</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM14-Decl"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</SI:hasSymbol>
+        <SI:hasSymbol>S</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3797,9 +3782,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/sievert">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Sv}} = \left(\frac{{c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{s}}^2</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Sv}} = \left(\frac{{c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2}\right) {\rm{s}}^2</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM16-Res5"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sv</SI:hasSymbol>
+        <SI:hasSymbol>Sv</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3821,7 +3806,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/steradian">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sr</SI:hasSymbol>
+        <SI:hasSymbol>sr</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3839,9 +3824,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/tesla">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{T}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}}  \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}}  \times ({{9\:192\:631\:770}})^2 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^2</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{T}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}}  \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}}  \times ({{9\:192\:631\:770}})^2 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^2</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</SI:hasSymbol>
+        <SI:hasSymbol>T</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3862,7 +3847,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/tonne">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#nonSIUnit"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</SI:hasSymbol>
+        <SI:hasSymbol>t</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Non-SI unit accepted for use with the SI</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité en dehors du SI dont l&apos;usage est accepté avec le SI</SI:hasUnitTypeAsString>
         <SI:inOtherSIUnits>
@@ -3880,9 +3865,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/volt">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{V}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^4</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{V}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^4</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</SI:hasSymbol>
+        <SI:hasSymbol>V</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3903,9 +3888,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/watt">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{W}} = \left(\frac{{{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3}\right) {\rm{m}}^{-2}\;{\rm{s}}^3</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{W}} = \left(\frac{{{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^3}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^3}\right) {\rm{m}}^{-2}\;{\rm{s}}^3</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</SI:hasSymbol>
+        <SI:hasSymbol>W</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3926,9 +3911,9 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="http://si-digital-framework.org/SI/units/weber">
         <rdf:type rdf:resource="http://si-digital-framework.org/SI#SISpecialNamedUnit"/>
-        <SI:hasDefiningEquation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1\;{\rm{Wb}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^4</SI:hasDefiningEquation>
+        <SI:hasDefiningEquation>1\;{\rm{Wb}} = \left(\frac{{1.602\:176\:634 \times 10^{-19}} \times {{h}} \times {c}^2 \times {\Delta\nu_{\rm{Cs}}}^2}{{6.626\:070\:15 \times 10^{-34}} \times ({299\:792\:458})^2 \times ({{9\:192\:631\:770}})^2 \times {e}}\right) {\rm{m}}^{-2}\;{\rm{s}}^4</SI:hasDefiningEquation>
         <SI:hasDefiningResolution rdf:resource="http://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wb</SI:hasSymbol>
+        <SI:hasSymbol>Wb</SI:hasSymbol>
         <SI:hasUnitTypeAsString xml:lang="en">Named SI derived unit</SI:hasUnitTypeAsString>
         <SI:hasUnitTypeAsString xml:lang="fr">Unité SI dérivée ayant un nom spécial</SI:hasUnitTypeAsString>
         <SI:inBaseSIUnits>
@@ -3952,7 +3937,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM12-Res8"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-18</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</SI:hasSymbol>
+        <SI:hasSymbol>a</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">atto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">atto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3966,7 +3951,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.01</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</SI:hasSymbol>
+        <SI:hasSymbol>c</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">centi</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">centi</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3980,7 +3965,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">da</SI:hasSymbol>
+        <SI:hasSymbol>da</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">deca</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">déca</skos:prefLabel>
     </owl:NamedIndividual>
@@ -3994,7 +3979,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</SI:hasSymbol>
+        <SI:hasSymbol>d</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">deci</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">déci</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4008,7 +3993,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM15-Res10"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.9999998E17</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</SI:hasSymbol>
+        <SI:hasSymbol>E</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">exa</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">exa</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4022,7 +4007,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM12-Res8"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-15</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</SI:hasSymbol>
+        <SI:hasSymbol>f</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">femto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">femto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4036,7 +4021,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</SI:hasSymbol>
+        <SI:hasSymbol>G</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">giga</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">giga</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4050,7 +4035,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</SI:hasSymbol>
+        <SI:hasSymbol>h</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">hecto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">hecto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4064,7 +4049,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</SI:hasSymbol>
+        <SI:hasSymbol>k</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">kilo</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kilo</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4078,7 +4063,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</SI:hasSymbol>
+        <SI:hasSymbol>M</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">mega</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">méga</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4092,7 +4077,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-6</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">µ</SI:hasSymbol>
+        <SI:hasSymbol>µ</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">micro</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">micro</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4106,7 +4091,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.001</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</SI:hasSymbol>
+        <SI:hasSymbol>m</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">milli</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">milli</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4120,7 +4105,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-9</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</SI:hasSymbol>
+        <SI:hasSymbol>n</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">nano</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">nano</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4146,7 +4131,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM15-Res10"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000000000</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</SI:hasSymbol>
+        <SI:hasSymbol>P</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">peta</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">péta</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4160,7 +4145,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-12</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</SI:hasSymbol>
+        <SI:hasSymbol>p</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">pico</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">pico</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4174,7 +4159,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-30</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</SI:hasSymbol>
+        <SI:hasSymbol>q</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">quecto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">quecto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4188,7 +4173,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E30</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q</SI:hasSymbol>
+        <SI:hasSymbol>Q</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">quetta</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">quetta</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4202,7 +4187,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E27</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R</SI:hasSymbol>
+        <SI:hasSymbol>R</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">ronna</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">ronna</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4216,7 +4201,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM27-Res3"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-27</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</SI:hasSymbol>
+        <SI:hasSymbol>r</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">ronto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">ronto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4230,7 +4215,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM11-Res12"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000000</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</SI:hasSymbol>
+        <SI:hasSymbol>T</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">tera</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">téra</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4244,7 +4229,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-24</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</SI:hasSymbol>
+        <SI:hasSymbol>y</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">yocto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">yocto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4258,7 +4243,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E24</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y</SI:hasSymbol>
+        <SI:hasSymbol>Y</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">yotta</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">yotta</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4272,7 +4257,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E-21</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</SI:hasSymbol>
+        <SI:hasSymbol>z</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">zepto</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">zepto</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4286,7 +4271,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <SI:hasDefiningResolution rdf:resource="https://si-digital-framework.org/bodies/CGPM#CGPM19-Res4"/>
         <SI:hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0E21</SI:hasScalingFactor>
-        <SI:hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</SI:hasSymbol>
+        <SI:hasSymbol>Z</SI:hasSymbol>
         <skos:prefLabel xml:lang="en">zetta</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">zetta</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4306,7 +4291,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ABDO">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/gray"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABDO</skos:altLabel>
+        <skos:altLabel>ABDO</skos:altLabel>
         <skos:prefLabel xml:lang="en">absorbed dose</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">dose absorbée</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4320,7 +4305,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABDR</skos:altLabel>
+        <skos:altLabel>ABDR</skos:altLabel>
         <skos:prefLabel xml:lang="en">absorbed dose rate</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">débit de dose absorbée </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4334,7 +4319,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCA</skos:altLabel>
+        <skos:altLabel>ACCA</skos:altLabel>
         <skos:prefLabel xml:lang="fr">accelération angulaire </skos:prefLabel>
         <skos:prefLabel xml:lang="en">angular acceleration</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4348,7 +4333,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCE</skos:altLabel>
+        <skos:altLabel>ACCE</skos:altLabel>
         <skos:prefLabel xml:lang="en">acceleration</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">accélération</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4362,7 +4347,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMSC</skos:altLabel>
+        <skos:altLabel>AMSC</skos:altLabel>
         <skos:prefLabel xml:lang="en">amount of substance concentration </skos:prefLabel>
         <skos:prefLabel xml:lang="fr">concentration de quantité de matière</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4374,7 +4359,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/AMSU">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/mole"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMSU</skos:altLabel>
+        <skos:altLabel>AMSU</skos:altLabel>
         <skos:prefLabel xml:lang="en">amount of substance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">quantité de matière</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4386,7 +4371,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ANGP">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/radian"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANGP</skos:altLabel>
+        <skos:altLabel>ANGP</skos:altLabel>
         <skos:prefLabel xml:lang="fr">angle plan</skos:prefLabel>
         <skos:prefLabel xml:lang="en">plane angle</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4398,7 +4383,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ANGS">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/steradian"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANGS</skos:altLabel>
+        <skos:altLabel>ANGS</skos:altLabel>
         <skos:prefLabel xml:lang="fr">angle solide</skos:prefLabel>
         <skos:prefLabel xml:lang="en">solid angle</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4412,7 +4397,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AREA</skos:altLabel>
+        <skos:altLabel>AREA</skos:altLabel>
         <skos:prefLabel xml:lang="en">area</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">superficie</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4424,7 +4409,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ARRN">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/becquerel"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARRN</skos:altLabel>
+        <skos:altLabel>ARRN</skos:altLabel>
         <skos:prefLabel xml:lang="en">activity referred to a radionuclide</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">activité d&apos;un radionucléide</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4436,7 +4421,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/CATA">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/katal"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CATA</skos:altLabel>
+        <skos:altLabel>CATA</skos:altLabel>
         <skos:prefLabel xml:lang="fr">activité catalytique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">catalytic activity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4450,7 +4435,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTAC</skos:altLabel>
+        <skos:altLabel>CTAC</skos:altLabel>
         <skos:prefLabel xml:lang="en">catalytic activity concentration</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">concentration de l’activité catalytique </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4464,7 +4449,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUDE</skos:altLabel>
+        <skos:altLabel>CUDE</skos:altLabel>
         <skos:prefLabel xml:lang="en">current density</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">densité de courant</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4478,7 +4463,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DENS</skos:altLabel>
+        <skos:altLabel>DENS</skos:altLabel>
         <skos:prefLabel xml:lang="en">density</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">masse volumique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4490,7 +4475,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/DOEQ">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/sievert"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOEQ</skos:altLabel>
+        <skos:altLabel>DOEQ</skos:altLabel>
         <skos:prefLabel xml:lang="en">dose equivalent</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">équivalent de dose</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4504,7 +4489,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DYVI</skos:altLabel>
+        <skos:altLabel>DYVI</skos:altLabel>
         <skos:prefLabel xml:lang="en">dynamic viscosity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">viscosité dynamique </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4516,7 +4501,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELCA">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/farad"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELCA</skos:altLabel>
+        <skos:altLabel>ELCA</skos:altLabel>
         <skos:prefLabel xml:lang="en">capacitance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">capacité électrique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4530,7 +4515,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELCD</skos:altLabel>
+        <skos:altLabel>ELCD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">charge électrique volumique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric charge density</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4542,7 +4527,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELCH">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/coulomb"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELCH</skos:altLabel>
+        <skos:altLabel>ELCH</skos:altLabel>
         <skos:prefLabel xml:lang="fr">charge électrique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric charge</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4554,7 +4539,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELCO">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/siemens"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELCO</skos:altLabel>
+        <skos:altLabel>ELCO</skos:altLabel>
         <skos:prefLabel xml:lang="fr">conductance électrique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric conductance</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4566,7 +4551,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELCU">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/ampere"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELCU</skos:altLabel>
+        <skos:altLabel>ELCU</skos:altLabel>
         <skos:prefLabel xml:lang="fr">courant électrique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric current</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4580,7 +4565,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELFD</skos:altLabel>
+        <skos:altLabel>ELFD</skos:altLabel>
         <skos:prefLabel xml:lang="en">electric flux density</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">induction électrique </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4594,7 +4579,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELFS</skos:altLabel>
+        <skos:altLabel>ELFS</skos:altLabel>
         <skos:prefLabel xml:lang="fr">champ électrique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric field strength</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4606,7 +4591,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELIN">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/henry"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELIN</skos:altLabel>
+        <skos:altLabel>ELIN</skos:altLabel>
         <skos:prefLabel xml:lang="en">inductance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">inductance</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4618,7 +4603,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELPD">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/volt"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELPD</skos:altLabel>
+        <skos:altLabel>ELPD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">différence de potentiel électrique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">electric potential difference</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4630,7 +4615,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ELRE">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/ohm"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELRE</skos:altLabel>
+        <skos:altLabel>ELRE</skos:altLabel>
         <skos:prefLabel xml:lang="en">electric resistance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">résistance électrique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4644,7 +4629,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMIR</skos:altLabel>
+        <skos:altLabel>EMIR</skos:altLabel>
         <skos:prefLabel xml:lang="en">emission rate</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">taux d&apos;émission</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4658,7 +4643,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENGD</skos:altLabel>
+        <skos:altLabel>ENGD</skos:altLabel>
         <skos:prefLabel xml:lang="en">energy density</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">énergie volumique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4670,7 +4655,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ENGY">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/joule"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENGY</skos:altLabel>
+        <skos:altLabel>ENGY</skos:altLabel>
         <skos:prefLabel xml:lang="en">energy</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">énergie</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4684,7 +4669,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLUE</skos:altLabel>
+        <skos:altLabel>FLUE</skos:altLabel>
         <skos:prefLabel xml:lang="en">fluence</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">fluence</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4698,7 +4683,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLUR</skos:altLabel>
+        <skos:altLabel>FLUR</skos:altLabel>
         <skos:prefLabel xml:lang="fr">débit de fluence</skos:prefLabel>
         <skos:prefLabel xml:lang="en">fluence rate</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4710,7 +4695,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/FORC">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/newton"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FORC</skos:altLabel>
+        <skos:altLabel>FORC</skos:altLabel>
         <skos:prefLabel xml:lang="en">force</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">force</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4722,7 +4707,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/FREQ">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/hertz"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FREQ</skos:altLabel>
+        <skos:altLabel>FREQ</skos:altLabel>
         <skos:prefLabel xml:lang="en">frequency</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">fréquence</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4736,7 +4721,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HECA</skos:altLabel>
+        <skos:altLabel>HECA</skos:altLabel>
         <skos:prefLabel xml:lang="fr">capacité thermique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">heat capacity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4750,7 +4735,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HEFD</skos:altLabel>
+        <skos:altLabel>HEFD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">flux thermique surfacique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">heat flux density</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4762,7 +4747,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ILLU">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/lux"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ILLU</skos:altLabel>
+        <skos:altLabel>ILLU</skos:altLabel>
         <skos:prefLabel xml:lang="en">illuminance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">éclairement lumineux</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4774,7 +4759,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ITSC">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/degreeCelsius"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ITSC</skos:altLabel>
+        <skos:altLabel>ITSC</skos:altLabel>
         <skos:prefLabel xml:lang="en">ITS-90 temperature (℃)</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">température ITS-90 (℃)</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4786,7 +4771,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/ITSK">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/kelvin"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ITSK</skos:altLabel>
+        <skos:altLabel>ITSK</skos:altLabel>
         <skos:prefLabel xml:lang="en">ITS-90 temperature (K)</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">température ITS-90 (K)</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4800,7 +4785,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KIVI</skos:altLabel>
+        <skos:altLabel>KIVI</skos:altLabel>
         <skos:prefLabel xml:lang="en">kinematic viscosity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">viscosité cinématique </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4812,7 +4797,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/KRMA">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/gray"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KRMA</skos:altLabel>
+        <skos:altLabel>KRMA</skos:altLabel>
         <skos:prefLabel xml:lang="en">kerma</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kerma</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4826,7 +4811,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KRMR</skos:altLabel>
+        <skos:altLabel>KRMR</skos:altLabel>
         <skos:prefLabel xml:lang="en">kerma rate</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">kerma rate</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4838,7 +4823,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/LENG">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/metre"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LENG</skos:altLabel>
+        <skos:altLabel>LENG</skos:altLabel>
         <skos:prefLabel xml:lang="en">length</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">longueur</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4850,7 +4835,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/LUFL">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/lumen"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUFL</skos:altLabel>
+        <skos:altLabel>LUFL</skos:altLabel>
         <skos:prefLabel xml:lang="fr">flux lumineux</skos:prefLabel>
         <skos:prefLabel xml:lang="en">luminous flux</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4862,7 +4847,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/LUIN">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/candela"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUIN</skos:altLabel>
+        <skos:altLabel>LUIN</skos:altLabel>
         <skos:prefLabel xml:lang="fr">intensité lumineuse</skos:prefLabel>
         <skos:prefLabel xml:lang="en">luminous intensity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4876,7 +4861,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUMA</skos:altLabel>
+        <skos:altLabel>LUMA</skos:altLabel>
         <skos:prefLabel xml:lang="en">luminance</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">luminance lumineuse</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4890,7 +4875,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MACO</skos:altLabel>
+        <skos:altLabel>MACO</skos:altLabel>
         <skos:prefLabel xml:lang="fr">concentration massique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">mass concentration</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4904,7 +4889,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAFD</skos:altLabel>
+        <skos:altLabel>MAFD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">champ magnétique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">magnetic field strength</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4916,7 +4901,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/MASS">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/kilogram"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MASS</skos:altLabel>
+        <skos:altLabel>MASS</skos:altLabel>
         <skos:prefLabel xml:lang="en">mass</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">masse</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4928,7 +4913,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/MGFD">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/tesla"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MGFD</skos:altLabel>
+        <skos:altLabel>MGFD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">induction magnétique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">magnetic flux density</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4940,7 +4925,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/MGFL">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/weber"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MGFL</skos:altLabel>
+        <skos:altLabel>MGFL</skos:altLabel>
         <skos:prefLabel xml:lang="fr">flux d&apos;induction magnétique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">magnetic flux</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4954,7 +4939,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOEG</skos:altLabel>
+        <skos:altLabel>MOEG</skos:altLabel>
         <skos:prefLabel xml:lang="en">molar energy</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">énergie molaire </skos:prefLabel>
     </owl:NamedIndividual>
@@ -4968,7 +4953,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOEN</skos:altLabel>
+        <skos:altLabel>MOEN</skos:altLabel>
         <skos:prefLabel xml:lang="fr">entropie molaire</skos:prefLabel>
         <skos:prefLabel xml:lang="en">molar entropy</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4980,7 +4965,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/PHAS">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/radian"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHAS</skos:altLabel>
+        <skos:altLabel>PHAS</skos:altLabel>
         <skos:prefLabel xml:lang="en">phase</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">phase</skos:prefLabel>
     </owl:NamedIndividual>
@@ -4992,7 +4977,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/PLTS">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/kelvin"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLTS</skos:altLabel>
+        <skos:altLabel>PLTS</skos:altLabel>
         <skos:prefLabel xml:lang="en">PLTS-2000 temperature (K)</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">température PLTS-2000 (K)</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5004,7 +4989,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/POWR">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/watt"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POWR</skos:altLabel>
+        <skos:altLabel>POWR</skos:altLabel>
         <skos:prefLabel xml:lang="en">power</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">puissance, flux énergétique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5016,7 +5001,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/PRES">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/pascal"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRES</skos:altLabel>
+        <skos:altLabel>PRES</skos:altLabel>
         <skos:prefLabel xml:lang="fr">pression, contrainte</skos:prefLabel>
         <skos:prefLabel xml:lang="en">pressure</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5030,7 +5015,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRME</skos:altLabel>
+        <skos:altLabel>PRME</skos:altLabel>
         <skos:prefLabel xml:lang="en">permeability</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">perméabilitté</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5044,7 +5029,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRMI</skos:altLabel>
+        <skos:altLabel>PRMI</skos:altLabel>
         <skos:prefLabel xml:lang="en">permittivity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">permittivité</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5058,7 +5043,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RADI</skos:altLabel>
+        <skos:altLabel>RADI</skos:altLabel>
         <skos:prefLabel xml:lang="fr">luminance énergétique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">radiance</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5072,7 +5057,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAIN</skos:altLabel>
+        <skos:altLabel>RAIN</skos:altLabel>
         <skos:prefLabel xml:lang="fr">intensité énergétique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">radiant intensity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5083,7 +5068,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/REFI">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFI</skos:altLabel>
+        <skos:altLabel>REFI</skos:altLabel>
         <skos:prefLabel xml:lang="fr">indice de réfraction</skos:prefLabel>
         <skos:prefLabel xml:lang="en">refractive index</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5095,7 +5080,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/RLGB">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/bel"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RLGB</skos:altLabel>
+        <skos:altLabel>RLGB</skos:altLabel>
         <skos:prefLabel xml:lang="fr">logarithme d&apos;un rapport (B)</skos:prefLabel>
         <skos:prefLabel xml:lang="en">ratio logarithm (B)</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5107,7 +5092,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/RLGN">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/neper"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RLGN</skos:altLabel>
+        <skos:altLabel>RLGN</skos:altLabel>
         <skos:prefLabel xml:lang="fr">logarithme d&apos;un rapport (Np)</skos:prefLabel>
         <skos:prefLabel xml:lang="en">ratio logarithm (Np)</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5121,7 +5106,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SENG</skos:altLabel>
+        <skos:altLabel>SENG</skos:altLabel>
         <skos:prefLabel xml:lang="en">specific energy</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">énergie massique </skos:prefLabel>
     </owl:NamedIndividual>
@@ -5135,7 +5120,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHEC</skos:altLabel>
+        <skos:altLabel>SHEC</skos:altLabel>
         <skos:prefLabel xml:lang="fr">capacité thermique massique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">specific heat capacity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5149,7 +5134,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPVO</skos:altLabel>
+        <skos:altLabel>SPVO</skos:altLabel>
         <skos:prefLabel xml:lang="en">specific volume</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">volume massique</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5163,7 +5148,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUCD</skos:altLabel>
+        <skos:altLabel>SUCD</skos:altLabel>
         <skos:prefLabel xml:lang="fr">charge électrique surfacique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">surface charge density</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5177,7 +5162,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUDE</skos:altLabel>
+        <skos:altLabel>SUDE</skos:altLabel>
         <skos:prefLabel xml:lang="fr">masse surfacique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">surface density</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5191,7 +5176,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUTE</skos:altLabel>
+        <skos:altLabel>SUTE</skos:altLabel>
         <skos:prefLabel xml:lang="en">surface tension</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">tension superficielle </skos:prefLabel>
     </owl:NamedIndividual>
@@ -5205,7 +5190,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCON</skos:altLabel>
+        <skos:altLabel>TCON</skos:altLabel>
         <skos:prefLabel xml:lang="fr">conductivité thermique </skos:prefLabel>
         <skos:prefLabel xml:lang="en">thermal conductivity</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5217,7 +5202,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/TEMC">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/degreeCelsius"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEMC</skos:altLabel>
+        <skos:altLabel>TEMC</skos:altLabel>
         <skos:prefLabel xml:lang="en">Celsius temperature</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">température Celsius</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5229,7 +5214,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/TEMT">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/kelvin"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEMT</skos:altLabel>
+        <skos:altLabel>TEMT</skos:altLabel>
         <skos:prefLabel xml:lang="fr">température thermodynamique</skos:prefLabel>
         <skos:prefLabel xml:lang="en">thermodynamic temperature</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5241,7 +5226,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
     <owl:NamedIndividual rdf:about="https://si-digital-framework.org/quantities/TIME">
         <rdf:type rdf:resource="https://si-digital-framework.org/SI#QuantityKind"/>
         <SI:hasUnit rdf:resource="https://si-digital-framework.org/SI/units/second"/>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TIME</skos:altLabel>
+        <skos:altLabel>TIME</skos:altLabel>
         <skos:prefLabel xml:lang="fr">temps</skos:prefLabel>
         <skos:prefLabel xml:lang="en">time</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5255,7 +5240,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TORQ</skos:altLabel>
+        <skos:altLabel>TORQ</skos:altLabel>
         <skos:prefLabel xml:lang="fr">moment d’une force </skos:prefLabel>
         <skos:prefLabel xml:lang="en">moment of force</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5269,7 +5254,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VELA</skos:altLabel>
+        <skos:altLabel>VELA</skos:altLabel>
         <skos:prefLabel xml:lang="en">angular velocity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">vitesse angulaire </skos:prefLabel>
     </owl:NamedIndividual>
@@ -5283,7 +5268,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VELO</skos:altLabel>
+        <skos:altLabel>VELO</skos:altLabel>
         <skos:prefLabel xml:lang="en">velocity</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">vitesse</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5297,7 +5282,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VOLU</skos:altLabel>
+        <skos:altLabel>VOLU</skos:altLabel>
         <skos:prefLabel xml:lang="en">volume</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">volume</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5311,7 +5296,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WANU</skos:altLabel>
+        <skos:altLabel>WANU</skos:altLabel>
         <skos:prefLabel xml:lang="fr">nombre d&apos;ondes</skos:prefLabel>
         <skos:prefLabel xml:lang="en">wavenumber</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5325,7 +5310,7 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
         <SI:hasUnit>
             <rdf:Description/>
         </SI:hasUnit>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XPOS</skos:altLabel>
+        <skos:altLabel>XPOS</skos:altLabel>
         <skos:prefLabel xml:lang="fr">exposition (rayons x et γ) </skos:prefLabel>
         <skos:prefLabel xml:lang="en">exposure</skos:prefLabel>
     </owl:NamedIndividual>
@@ -5352,5 +5337,5 @@ NOTE 3.Systematic measurement error equals measurement error minus random measur
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
